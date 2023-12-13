@@ -21,9 +21,12 @@ class Node<N: Comparable>: Equatable {
 }
 
 class LinkedList<N: Comparable> {
+    /// Head of the linked list, i.e. the first element
     var head: Node<N>?
+    /// Tail of the linked list, i.e. the last element
     var tail: Node<N>?
     
+    /// Length of the linked list chain
     var length: Int {
         var count = 0
         var current = head

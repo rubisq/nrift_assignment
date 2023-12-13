@@ -15,6 +15,8 @@ final class ExchangeRatesViewModel: ObservableObject {
     private var cancellableSet = Set<AnyCancellable>()
     
     // MARK: Networking
+    
+    /// Fetch from the exchange rates API
     func fetchExchangeRates() {
         APIManager.fetchAUDExchangeRates()
             .receive(on: DispatchQueue.main)
@@ -33,6 +35,10 @@ final class ExchangeRatesViewModel: ObservableObject {
     }
     
     // MARK: Utils
+    
+    /// Parse the api response, insert then into the linked list, and sort it.
+    ///
+    /// - Parameter response: The response received from exchange rates API
     private func parse(_ response: ExchangeRatesModel) {
         let list: LinkedList<ExchangeRateItem> = LinkedList()
         response.aud.forEach { list.insert(node: ExchangeRateItem(name: $0, rate: $1)) }

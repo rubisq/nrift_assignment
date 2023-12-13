@@ -12,7 +12,6 @@
 		50CCEC4A2B296E3600DA5074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CCEC482B296E3600DA5074 /* Main.storyboard */; };
 		50CCEC4C2B296E3800DA5074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50CCEC4B2B296E3800DA5074 /* Assets.xcassets */; };
 		50CCEC4F2B296E3800DA5074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50CCEC4D2B296E3800DA5074 /* LaunchScreen.storyboard */; };
-		50CCEC5A2B296E3800DA5074 /* nomura_assignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC592B296E3800DA5074 /* nomura_assignmentTests.swift */; };
 		50CCEC642B296E3800DA5074 /* nomura_assignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC632B296E3800DA5074 /* nomura_assignmentUITests.swift */; };
 		50CCEC662B296E3800DA5074 /* nomura_assignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC652B296E3800DA5074 /* nomura_assignmentUITestsLaunchTests.swift */; };
 		50CCEC752B296F5E00DA5074 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC742B296F5E00DA5074 /* APIManager.swift */; };
@@ -24,6 +23,8 @@
 		50CCEC862B29903400DA5074 /* ExchangeRateListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50CCEC842B29903400DA5074 /* ExchangeRateListTableViewCell.xib */; };
 		50CCEC882B29914900DA5074 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC872B29914900DA5074 /* UIViewX.swift */; };
 		50CCEC8A2B299AE000DA5074 /* ExchangeRatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC892B299AE000DA5074 /* ExchangeRatesViewModel.swift */; };
+		50F82DFE2B29F63C004750CF /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F82DFD2B29F63C004750CF /* APITests.swift */; };
+		50F82E002B29F6B7004750CF /* ExchangeRateDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F82DFF2B29F6B7004750CF /* ExchangeRateDataTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,6 @@
 		50CCEC4E2B296E3800DA5074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50CCEC502B296E3800DA5074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50CCEC552B296E3800DA5074 /* nomura_assignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nomura_assignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		50CCEC592B296E3800DA5074 /* nomura_assignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomura_assignmentTests.swift; sourceTree = "<group>"; };
 		50CCEC5F2B296E3800DA5074 /* nomura_assignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nomura_assignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50CCEC632B296E3800DA5074 /* nomura_assignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomura_assignmentUITests.swift; sourceTree = "<group>"; };
 		50CCEC652B296E3800DA5074 /* nomura_assignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomura_assignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -65,6 +65,8 @@
 		50CCEC842B29903400DA5074 /* ExchangeRateListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeRateListTableViewCell.xib; sourceTree = "<group>"; };
 		50CCEC872B29914900DA5074 /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		50CCEC892B299AE000DA5074 /* ExchangeRatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesViewModel.swift; sourceTree = "<group>"; };
+		50F82DFD2B29F63C004750CF /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		50F82DFF2B29F6B7004750CF /* ExchangeRateDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateDataTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +133,8 @@
 		50CCEC582B296E3800DA5074 /* nomura_assignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				50CCEC592B296E3800DA5074 /* nomura_assignmentTests.swift */,
+				50F82DFD2B29F63C004750CF /* APITests.swift */,
+				50F82DFF2B29F6B7004750CF /* ExchangeRateDataTests.swift */,
 			);
 			path = nomura_assignmentTests;
 			sourceTree = "<group>";
@@ -356,7 +359,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50CCEC5A2B296E3800DA5074 /* nomura_assignmentTests.swift in Sources */,
+				50F82DFE2B29F63C004750CF /* APITests.swift in Sources */,
+				50F82E002B29F6B7004750CF /* ExchangeRateDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
