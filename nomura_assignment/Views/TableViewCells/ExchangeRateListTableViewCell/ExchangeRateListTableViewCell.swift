@@ -18,6 +18,13 @@ class ExchangeRateListTableViewCell: UITableViewCell {
     static let reuseIdentifier: String = "ExchangeRateListTableViewCell"
     
     // MARK: Instance vars
+    var exchangeRate: ExchangeRateItem? {
+        didSet {
+            guard let exchangeRate = exchangeRate else { return }
+            currencyNameLabel.text = exchangeRate.name.uppercased()
+            currencyExchangeRateLabel.text = String(exchangeRate.rate)
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
