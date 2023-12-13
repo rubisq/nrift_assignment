@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-691" y="-35"/>
         </scene>
-        <!--Currency List View Controller-->
+        <!--Exchange Rates View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CurrencyListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="CurrencyListViewController" customModule="nomura_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExchangeRateListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ExchangeRatesViewController" customModule="nomura_assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

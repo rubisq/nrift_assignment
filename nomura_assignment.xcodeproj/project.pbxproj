@@ -16,12 +16,12 @@
 		50CCEC642B296E3800DA5074 /* nomura_assignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC632B296E3800DA5074 /* nomura_assignmentUITests.swift */; };
 		50CCEC662B296E3800DA5074 /* nomura_assignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC652B296E3800DA5074 /* nomura_assignmentUITestsLaunchTests.swift */; };
 		50CCEC752B296F5E00DA5074 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC742B296F5E00DA5074 /* APIManager.swift */; };
-		50CCEC792B297B3000DA5074 /* CurrencyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC782B297B3000DA5074 /* CurrencyListModel.swift */; };
+		50CCEC792B297B3000DA5074 /* ExchangeRateListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC782B297B3000DA5074 /* ExchangeRateListModel.swift */; };
 		50CCEC7B2B2980E800DA5074 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC7A2B2980E800DA5074 /* LinkedList.swift */; };
 		50CCEC7D2B298A8C00DA5074 /* APIManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC7C2B298A8C00DA5074 /* APIManagerError.swift */; };
-		50CCEC7F2B298DD300DA5074 /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC7E2B298DD300DA5074 /* CurrencyListViewController.swift */; };
-		50CCEC852B29903400DA5074 /* CurrencyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC832B29903400DA5074 /* CurrencyListTableViewCell.swift */; };
-		50CCEC862B29903400DA5074 /* CurrencyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50CCEC842B29903400DA5074 /* CurrencyListTableViewCell.xib */; };
+		50CCEC7F2B298DD300DA5074 /* ExchangeRatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC7E2B298DD300DA5074 /* ExchangeRatesViewController.swift */; };
+		50CCEC852B29903400DA5074 /* ExchangeRateListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC832B29903400DA5074 /* ExchangeRateListTableViewCell.swift */; };
+		50CCEC862B29903400DA5074 /* ExchangeRateListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50CCEC842B29903400DA5074 /* ExchangeRateListTableViewCell.xib */; };
 		50CCEC882B29914900DA5074 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCEC872B29914900DA5074 /* UIViewX.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,12 +56,12 @@
 		50CCEC632B296E3800DA5074 /* nomura_assignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomura_assignmentUITests.swift; sourceTree = "<group>"; };
 		50CCEC652B296E3800DA5074 /* nomura_assignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nomura_assignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		50CCEC742B296F5E00DA5074 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		50CCEC782B297B3000DA5074 /* CurrencyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListModel.swift; sourceTree = "<group>"; };
+		50CCEC782B297B3000DA5074 /* ExchangeRateListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateListModel.swift; sourceTree = "<group>"; };
 		50CCEC7A2B2980E800DA5074 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		50CCEC7C2B298A8C00DA5074 /* APIManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerError.swift; sourceTree = "<group>"; };
-		50CCEC7E2B298DD300DA5074 /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
-		50CCEC832B29903400DA5074 /* CurrencyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListTableViewCell.swift; sourceTree = "<group>"; };
-		50CCEC842B29903400DA5074 /* CurrencyListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyListTableViewCell.xib; sourceTree = "<group>"; };
+		50CCEC7E2B298DD300DA5074 /* ExchangeRatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesViewController.swift; sourceTree = "<group>"; };
+		50CCEC832B29903400DA5074 /* ExchangeRateListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateListTableViewCell.swift; sourceTree = "<group>"; };
+		50CCEC842B29903400DA5074 /* ExchangeRateListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeRateListTableViewCell.xib; sourceTree = "<group>"; };
 		50CCEC872B29914900DA5074 /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,18 +165,18 @@
 		50CCEC762B297B0500DA5074 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				50CCEC772B297B1400DA5074 /* CurrencyList */,
+				50CCEC772B297B1400DA5074 /* ExchangeRateList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		50CCEC772B297B1400DA5074 /* CurrencyList */ = {
+		50CCEC772B297B1400DA5074 /* ExchangeRateList */ = {
 			isa = PBXGroup;
 			children = (
-				50CCEC782B297B3000DA5074 /* CurrencyListModel.swift */,
-				50CCEC7E2B298DD300DA5074 /* CurrencyListViewController.swift */,
+				50CCEC782B297B3000DA5074 /* ExchangeRateListModel.swift */,
+				50CCEC7E2B298DD300DA5074 /* ExchangeRatesViewController.swift */,
 			);
-			path = CurrencyList;
+			path = ExchangeRateList;
 			sourceTree = "<group>";
 		};
 		50CCEC802B298FF600DA5074 /* Views */ = {
@@ -190,18 +190,18 @@
 		50CCEC812B298FFE00DA5074 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				50CCEC822B29900B00DA5074 /* CurrencyListTableViewCell */,
+				50CCEC822B29900B00DA5074 /* ExchangeRateListTableViewCell */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
-		50CCEC822B29900B00DA5074 /* CurrencyListTableViewCell */ = {
+		50CCEC822B29900B00DA5074 /* ExchangeRateListTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				50CCEC832B29903400DA5074 /* CurrencyListTableViewCell.swift */,
-				50CCEC842B29903400DA5074 /* CurrencyListTableViewCell.xib */,
+				50CCEC832B29903400DA5074 /* ExchangeRateListTableViewCell.swift */,
+				50CCEC842B29903400DA5074 /* ExchangeRateListTableViewCell.xib */,
 			);
-			path = CurrencyListTableViewCell;
+			path = ExchangeRateListTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50CCEC862B29903400DA5074 /* CurrencyListTableViewCell.xib in Resources */,
+				50CCEC862B29903400DA5074 /* ExchangeRateListTableViewCell.xib in Resources */,
 				50CCEC4F2B296E3800DA5074 /* LaunchScreen.storyboard in Resources */,
 				50CCEC4C2B296E3800DA5074 /* Assets.xcassets in Resources */,
 				50CCEC4A2B296E3600DA5074 /* Main.storyboard in Resources */,
@@ -337,14 +337,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				50CCEC7B2B2980E800DA5074 /* LinkedList.swift in Sources */,
-				50CCEC852B29903400DA5074 /* CurrencyListTableViewCell.swift in Sources */,
+				50CCEC852B29903400DA5074 /* ExchangeRateListTableViewCell.swift in Sources */,
 				50CCEC752B296F5E00DA5074 /* APIManager.swift in Sources */,
 				50CCEC882B29914900DA5074 /* UIViewX.swift in Sources */,
-				50CCEC7F2B298DD300DA5074 /* CurrencyListViewController.swift in Sources */,
+				50CCEC7F2B298DD300DA5074 /* ExchangeRatesViewController.swift in Sources */,
 				50CCEC432B296E3600DA5074 /* AppDelegate.swift in Sources */,
 				50CCEC452B296E3600DA5074 /* SceneDelegate.swift in Sources */,
 				50CCEC7D2B298A8C00DA5074 /* APIManagerError.swift in Sources */,
-				50CCEC792B297B3000DA5074 /* CurrencyListModel.swift in Sources */,
+				50CCEC792B297B3000DA5074 /* ExchangeRateListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

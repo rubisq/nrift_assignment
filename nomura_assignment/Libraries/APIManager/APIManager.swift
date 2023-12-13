@@ -14,13 +14,13 @@ final class APIManager {
     
     /// Fetches the currency list
     /// - Returns: A publisher containing either currency list or an error
-    static func fetchCurrencyList() -> AnyPublisher<CurrencyListModel, Error> {
+    static func fetchCurrencyList() -> AnyPublisher<ExchangeRateListModel, Error> {
         return URLSession.shared.dataTaskPublisher(for: (url))
             .map(\.data)
             .mapError { APIManagerError.apiErrorWithCustomMessage(code: $0.errorCode, message: $0.localizedDescription) }
             .tryMap { data in
                 do {
-                    let currencyList = try JSONDecoder().decode(CurrencyListModel.self, from: data)
+                    let currencyList = try JSONDecoder().decode(ExchangeRateListModel.self, from: data)
                     return currencyList
                 } catch let e {
                     debugPrint("Json decoding error: \(e)")
