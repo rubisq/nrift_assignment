@@ -34,6 +34,7 @@ final class ExchangeRateDataTests: XCTestCase {
         list.insert(node: ExchangeRateItem(name: "CD", rate: 22.8))
         list.insert(node: ExchangeRateItem(name: "EF", rate: 20.0))
         list.insert(node: ExchangeRateItem(name: "AX", rate: 20.8))
+        XCTAssertEqual(list.length, 4)
         list.bubbleSort()
         XCTAssertEqual(list.head?.value.name, "CD")
         XCTAssertEqual(list.head?.next?.value.name, "AX")

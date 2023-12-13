@@ -11,16 +11,21 @@ import Combine
 final class ExchangeRatesViewModel: ObservableObject {
     
     @Published private(set) var exchangeRatesLinkedList: LinkedList<ExchangeRateItem> = LinkedList()
+    @Published private(set) var isRefreshing: Bool = false
     
     private var cancellableSet = Set<AnyCancellable>()
+    private var originalExchangeRatesLinkedList: LinkedList<ExchangeRateItem> = LinkedList()
     
     // MARK: Networking
     
     /// Fetch from the exchange rates API
-    func fetchExchangeRates() {
+    func fetchExchangeRates(asRefresh: Bool = false) {
+        if asRefresh { isRefreshing = true }
         APIManager.fetchAUDExchangeRates()
             .receive(on: DispatchQueue.main)
-            .sink { result in
+            .sink { [weak self] result in
+                guard let self = self else { return }
+                if asRefresh { self.isRefreshing = false }
                 switch result {
                 case .finished:
                     debugPrint("FetchExchangeRates Complete")
@@ -29,12 +34,25 @@ final class ExchangeRatesViewModel: ObservableObject {
                 }
             } receiveValue: { [weak self] value in
                 guard let self = self else { return }
-                parse(value)
+                self.parse(value)
             }
             .store(in: &cancellableSet)
     }
     
     // MARK: Utils
+    
+    /// Searches the linked list and replace `exchangeRatesLinkedList` with
+    /// the filtered values so the UI shows them
+    ///
+    /// - Parameter keyword: The keyword to search with. Provide blank (`""`)
+    /// string to reset the search
+    func search(by keyword: String) {
+        guard !keyword.isEmpty else {
+            exchangeRatesLinkedList = originalExchangeRatesLinkedList
+            return 
+        }
+        exchangeRatesLinkedList = originalExchangeRatesLinkedList.filter { $0.name.localizedCaseInsensitiveContains(keyword) }
+    }
     
     /// Parse the api response, insert then into the linked list, and sort it.
     ///
@@ -46,5 +64,6 @@ final class ExchangeRatesViewModel: ObservableObject {
         list.bubbleSort()
         list.printList()
         exchangeRatesLinkedList = list
+        originalExchangeRatesLinkedList = list
     }
 }

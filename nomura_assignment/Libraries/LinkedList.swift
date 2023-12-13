@@ -40,6 +40,8 @@ class LinkedList<N: Comparable> {
     /// Inserts a node at the `next` of the current `tail` of the linked list
     ///
     /// - Parameter node: The node to insert
+    ///
+    /// - Complexity: O(*1*)
     func insert(node: N) {
         let newNode = Node(value: node)
         if let tailNode = tail {
@@ -59,6 +61,8 @@ class LinkedList<N: Comparable> {
     /// Finds the node at the given position. Uses O(n) time complexity.
     ///
     /// - Parameter position: position in terms of linked chain length.
+    ///
+    /// - Complexity: O(*n*)
     func getItem(at position: Int) -> Node<N>? {
         guard position != 0 else { return head }
         var nodeToReturn = head
@@ -70,14 +74,16 @@ class LinkedList<N: Comparable> {
     
     /// Swaps the current node with the next node. Required in bubble sort method.
     ///
-    /// - Parameter current:
+    /// - Parameter current: The node that needs to be swapped with the next one.
     func swapWithNextNode(current: Node<N>?) {
         guard let nextValue = current?.next?.value, let temp = current?.value else { return }
         current?.value = nextValue
         current?.next?.value = temp
     }
     
-    /// Swaps the linked list using bubble sort. Does it with `O(n^2)` time complexity.
+    /// Swaps the linked list using bubble sort.
+    ///
+    /// - Complexity: O(*n^2*)
     func bubbleSort() {
         guard head != nil && head?.next != nil else { return }
         var i = head
@@ -92,6 +98,29 @@ class LinkedList<N: Comparable> {
             }
             i = i?.next
         }
+    }
+    
+    /// Filter function to create new linked list out of the filtered elements
+    /// of the existing one. It uses an Swift's inbuilt filter like signature.
+    ///
+    /// - Parameter predicate: A closure where the current value is passed, so that
+    /// it can be tested whether it's eligible as a filtered value and returns the
+    /// boolean return.
+    ///
+    /// - Returns: The filtered linked list.
+    ///
+    /// - Complexity: O(*n*)
+    func filter(_ predicate: (N) -> Bool) -> LinkedList<N> {
+        let newLinkedList = LinkedList<N>()
+        var current = head
+        while current != nil {
+            guard let value = current?.value else { continue }
+            if predicate(value) {
+                newLinkedList.insert(node: value)
+            }
+            current = current?.next
+        }
+        return newLinkedList
     }
     
     /// Prints the list by iterating through its linked nodes.
